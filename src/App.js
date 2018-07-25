@@ -9,6 +9,8 @@ class App extends Component {
       const formData = new FormData();
       formData.append('file', file);
       formData.append('upload_preset', 'u6bzb6i1');
+      
+      formData.append('callback','https://www.ecos.studio/cors_callback.html');
 
       axios.post("https://api.cloudinary.com/v1_1/ecos/video/upload", formData,
         {headers: {}}
